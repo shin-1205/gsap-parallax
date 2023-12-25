@@ -1,5 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
+
+// ベースの作成
 function createScrollAnimation(selector, y, duration) {
   gsap.to(selector, {
     y: y,
@@ -9,18 +11,18 @@ function createScrollAnimation(selector, y, duration) {
       scrub: 4,
       start: "top 100%",
       end: "top 30%",
-      markers: true
     }
   });
 }
 
+// ここの値を入れる
 createScrollAnimation("#sixth", 110, 1);
 createScrollAnimation("#fifth", 120, 2);
 createScrollAnimation("#forth", 200, 3);
 createScrollAnimation("#third", 200, 5);
 createScrollAnimation("#second", 120, 5);
 
-// 特殊なアニメーションが必要な要素のために、個別の呼び出し
+// 枠の部分
 gsap.to(".blur", {
   y: -100,
   duration: 3,
@@ -29,10 +31,10 @@ gsap.to(".blur", {
     scrub: 4,
     start: "top 100%",
     end: "top 30%",
-    markers: true
   }
 });
 
+// Heading
 gsap.to(".title", {
   y: -50,
   scale: 1.5,
@@ -43,6 +45,5 @@ gsap.to(".title", {
     scrub: 4,
     start: "top 100%",
     end: "top 50%",
-    markers: true
   }
 });
